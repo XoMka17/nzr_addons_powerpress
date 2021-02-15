@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: Custom addons for powerpress plugin
- * Plugin URI: https://github.com/XoMka17/nzr_addons_powerpress
- * Description: Custom plugin for powerpress. Add custom player
+ * Plugin Name: Custom WP MP3 player
+ * Plugin URI: https://github.com/XoMka17/wp_mp3_player
+ * Description: Wordpress MP3 player by Nazar Kalian
  * Version: 1.0
- * Text Domain: nzr_addons_powerpress
+ * Text Domain: wp_mp3_player
  * Author: Nazar Kalian
  * Author URI: https://www.facebook.com/profile.php?id=100005095004749
  */

@@ -1,2 +1,2 @@
-# nzr_addons_powerpress
-Custom plugin for powerpress. Add custom player
+# wp_mp3_player
+Wordpress MP3 player by Nazar Kalian
