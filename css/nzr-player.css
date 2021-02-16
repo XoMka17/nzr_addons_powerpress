@@ -1,13 +1,13 @@
 /** Customizable Style **/
-.container-fluid {
+.nzr-container-fluid {
     position: relative;
-    height: 200px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
-/*.logo {
-	background: url("//assets.libsyn.com/player_logo/103692?theme=custom") no-repeat center !important;
-}*/
+.nzr-container-fluid .logo {
+    text-align: center;
+	/*background: url("//assets.libsyn.com/player_logo/103692?theme=custom") no-repeat center !important;*/
+}
 
 
 .duration, .close-overlay:after, .playlist-item.current .playlist-item-title, .playlist-item.current .playlist-item-duration, .playlist-item.current .playlist-item-date, .playlist-item.current .playlist-item-info-link, a, a:hover, a:visited, a:focus {
@@ -125,10 +125,6 @@
     text-overflow: ellipsis
 }
 
-body, html {
-    height: 100% !important
-}
-
 .player {
     max-width: 100%;
     overflow: hidden
@@ -235,8 +231,11 @@ body, html {
 }
 
 .full-screen, .prev, .prev-thirty, .reset-view, .seek-bar, .share, .skip, .skip-thirty {
-    cursor: hand;
     cursor: pointer
+}
+.nzr-container-fluid .prev-thirty a, .nzr-container-fluid .skip-thirty a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .track-btn {
@@ -254,7 +253,9 @@ body, html {
 .share-img {
     max-height: 20px !important;
     width: auto !important;
-    margin-top: -8px
+    margin-top: -8px;
+
+    vertical-align: middle;
 }
 
 .play-bar {

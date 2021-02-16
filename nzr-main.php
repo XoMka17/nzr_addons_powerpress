@@ -32,11 +32,8 @@ function nzr_custom_player($atts) {
     $link_array = explode('/',$atts['file']);
     $mp3_file = end($link_array);
 
-    var_dump($mp3_file);
-
-
     $content = '
-<div role="main" class="container-fluid">
+<div role="main" class="nzr-container-fluid">
     <!-- rss overlay, hidden initially -->
     <div class="dark-overlay" id="rss-overlay">
         <a class="close-overlay"></a>
@@ -85,21 +82,17 @@ function nzr_custom_player($atts) {
                             </a>
                         </li>
                         
-                        <!--
                         <li>
-                            <a class="resource-button-link" id="deezer_button" href="https://www.deezer.com/show/2065662" target="_blank">
+                            <a class="resource-button-link" id="deezer_button" href="' . $atts['deezer_url'] . '" target="_blank">
                                 <img class="resource-button img-responsive" src="//static.libsyn.com/p/assets/platform/customplayer/images/deezer.png" style="display:block;margin-left:auto;margin-right:auto;">
                             </a>
                         </li>
-                        -->
                         
-                        <!--
                         <li>
-                            <a class="resource-button-link" id="rss_button" href="http://financialresidency.libsyn.com/rss" target="_blank">
+                            <a class="resource-button-link" id="rss_button" href="' . $atts['rss_url'] . '" target="_blank">
                                 <img class="resource-button img-responsive" src="//static.libsyn.com/p/assets/platform/customplayer/images/rss.png" style="display:block;margin-left:auto;margin-right:auto;">
                             </a>
                         </li>
-                        -->
                     </ul>
                 </div>
 
@@ -138,7 +131,7 @@ function nzr_custom_player($atts) {
     <div class="dark-overlay" id="share-overlay">
   	    <a class="close-overlay"></a>
         <div class="lightbox-inset">
-            <div class="sharethis-inline-share-buttons" data-url="http://financialresidency.libsyn.com/why-you-need-to-have-joint-accounts-with-catherine-alford" data-title="Why You Need to Have Joint Accounts" data-image="' . $atts['img'] . '"></div>
+            <div class="sharethis-inline-share-buttons" data-url="' . $atts['file'] . '" data-title="' . $atts['title'] . '" data-image="' . $atts['img'] . '"></div>
         </div>
     </div>
 
@@ -451,8 +444,8 @@ function updatePlayer(trackChanged){
         }
 
       $(".sharethis-inline-share-buttons").attr({
-          \'data-url\': "' . $atts['title'] . '",
-          \'data-image\': playList[currentTrack].thumbnail_url,
+          \'data-url\': "' . $atts['file'] . '",
+          \'data-image\': "' . $atts['img'] . '",
           \'data-title\': "' . $atts['title'] . '"
       });
 
